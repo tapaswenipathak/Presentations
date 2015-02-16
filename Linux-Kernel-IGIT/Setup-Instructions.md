@@ -130,3 +130,6 @@ git fetch origin
 Find more information [here](http://kernelnewbies.org/OutreachyfirstpatchSetup?action=show&redirect=OPWfirstpatchSetup) and [here](http://kernelnewbies.org/Outreachyfirstpatch?action=show&redirect=OPWfirstpatch).
 
 More on git setup is [here](https://tapaswenipathak.wordpress.com/2014/08/26/git-setup/).
+
+
+Some more useful links are [here](https://tapaswenipathak.wordpress.com/2014/10/03/submit-your-first-linux-kernel-patch/).
