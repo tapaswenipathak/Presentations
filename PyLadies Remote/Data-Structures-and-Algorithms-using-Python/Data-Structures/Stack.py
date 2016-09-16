@@ -1,21 +1,22 @@
 class Stack:
-     def __init__(self) :
-         self.data = []
 
-     def isEmpty(self) :
-         return self.data == []
+    def __init__(self):
+        self.data = []
 
-     def push(self, data) :
-         self.data.append(data)
+    def isEmpty(self):
+        return self.data == []
 
-     def pop(self) :
-         return self.data.pop()
+    def push(self, data):
+        self.data.append(data)
 
-     def peek(self) :
-         return self.data[len(self.data) - 1]
+    def pop(self):
+        return self.data.pop()
 
-     def size(self) :
-         return len(self.data)
+    def peek(self):
+        return self.data[len(self.data) - 1]
+
+    def size(self):
+        return len(self.data)
 
 
 mystack = Stack()

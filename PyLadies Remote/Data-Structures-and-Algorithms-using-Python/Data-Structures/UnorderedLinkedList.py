@@ -1,78 +1,79 @@
-class Node :
-    def __init__(self, initdata) :
+class Node:
+
+    def __init__(self, initdata):
         self.data = initdata
         self.next = None
-        
-    def getData(self) :
+
+    def getData(self):
         return self.data
-    
+
     def getNext(self):
         return self.next
-        
-    def setData(self, newdata) :
+
+    def setData(self, newdata):
         self.data = newdata
-    
-    def setNext(self, newext) :
+
+    def setNext(self, newext):
         self.next = newext
 
 
-class UnorderedList :
-    def __init__(self) :
+class UnorderedList:
+
+    def __init__(self):
         self.head = None
-        
-    def isEmpty(self) :
+
+    def isEmpty(self):
         return self.head == None
-        
-    def add(self, data) :
+
+    def add(self, data):
         temp = Node(data)
         temp.setNext(self.head)
         self.head = temp
-        
+
     def size(self):
         current = self.head
         size = 0
-        while current != None :
+        while current != None:
             size = size + 1
             current = current.getNext()
-        
+
         return size
-        
-    def printList(self) :
+
+    def printList(self):
         current = self.head
-        while current != None :
+        while current != None:
             print current.getData(),
             current = current.getNext()
-        
-    def search(self, data) :
+
+    def search(self, data):
         current = self.head
         found = False
-        while current != None and not found :
-            if current.getData() == data :
+        while current != None and not found:
+            if current.getData() == data:
                 found = True
-            else :
+            else:
                 current = current.getNext()
-        
+
         return found
-        
-    def remove(self, data) :
+
+    def remove(self, data):
         current = self.head
         previous = None
         found = False
-        while not found :
-            if current.getData() == data :
+        while not found:
+            if current.getData() == data:
                 found = True
-            else :
+            else:
                 previous = current
                 current = current.getNext()
-        
-        if previous == None :
+
+        if previous == None:
             self.head = current.getNext()
-        
-        else :
+
+        else:
             previous.setNext(current.getNext())
-            
-    
-            
+
+
 mylist = UnorderedList()
 
 mylist.add(18)
