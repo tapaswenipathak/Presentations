@@ -1,11 +1,13 @@
+import math
+
 def sieve(n):
-    not_prime = []
-    primes = []
-    for i in xrange(2, n + 1):
-        if i not in not_prime:
-            primes.append(i)
-            for j in xrange(i * i, n + 1, i):
-                not_prime.append(j)
+    primes = [True] * n
+    for i in range(2, int(math.sqrt(n+1))):
+        if primes[i]:
+            for j in range(i * i, n, i):
+                primes[j] = False
     return primes
 
-print sieve(100)
+primes = sieve(100)
+
+print [i for i, x in enumerate(primes) if x and i > 1]
