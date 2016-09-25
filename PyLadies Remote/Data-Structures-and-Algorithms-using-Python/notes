@@ -1,0 +1,196 @@
+Let's start with data strucutres.
+
+What are data strucutres, why are we reading them?
+
+Wikipedia says
+In computer science, a data structure is a particular way of organizing data in a computer so that it can be used efficiently, the data.
+Different kinds of data structures are suited to different kinds of applications, and some are highly specialized to specific tasks.
+
+So in short data strucutre is the organization of data needed to solve the problem.
+
+For people who are hearing this term for the first time, but have worked with Python. Most of you would have used map, list, dictionaries? They are some of the
+data strucures. They organize the data for us in a certain way making some operations faster and some other slower.
+
+These data strucures can be implemented using classes, supporting oop and also in ways different than by using classes, for example how we do it in C.
+
+Let's start with our first data structure.
+
+Singly LinkedList.
+
+I am sure many of you would have used List in Python.
+
+LinkedList? What it is?
+
+Let's think of a scenario, where a teacher takes her students for a movie. They reached a bit late. She didn't book the tickets beforehand. The seats that she is getting are not together in a row, also not in a column. Seats are spread all over the cinema hall. She cannot deny the kids for the movie, they may cry. They are kids, so they are not much responsible. So she has to handle everything for them. Now after they take their seats in the cinema hall, she want to have the track of the locations they are sitting on. They are kids, so they may forget. She wants to make them learn something new, more than what they will learn from a movie. So she gets an idea. She takes out some paper chits and writes the location of the every kid on different chits. Now she gives the chit to every kid. The paper chit that each kid is holding is having the information about the next kid, who is may be sitting beside the previous kid or may be is very far. She also has the chit which has the seat number of the first kid in this chain.
+
+Now this chain is a singly linked list. For cases in computer science we prefer non contiguous memory allocation. Where we have holes in memory, that is blank spaces somewhere and filled spaces somewhere else. Linkedlist is a implementation of this. We allocate a bunch of memory, and assocaite one more field with this bunch of memory allocated which will have the address of next bunch allocated in memory. As per the needs a long chain is formed. 
+
+We can insert at any point, we can remove elements. Ofcoure we can traverse singly linked list. As every node is having the address of next node, we need to traverse it sequenctally starting from the first node. While traversing we can also give the user the size of the linked list if they need. We can also tell if the list is empty, if it has no elements. Yes? 
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Now let's talk about undirected graph.
+
+What is graph?
+
+Graphs are mathematical concepts that have found many uses in computer science.
+
+You on facebook is a node on a huge graph.
+Your city is a node on a graph in Google maps.
+
+They are of different types
+
+
+1. simple graph
+2. Undirected or directed graph
+3. Cyclic or acyclic graph.
+4. labelled graph.
+5. weighted graphs.
+6. Infinite graphs.
+7. and many more.
+
+A graph is made of two sets called vertices and edges.
+
+You can call a vertex a node on graph. Each edge join two vertices or nodes on a graph.
+
+Vertices set for this graph will be
+and the edge set will be...
+
+If (u,v) is in the edge set we say u is adjecent to v.
+
+In an undirected graph the order of vertex in the pairs in the edge set doesn't matter. In undirected graph if we say there is an edge from u to v, we also say there is an edge from v to u.
+
+One way to represent graphs would be to directly store the vertices set and edge set. This representation is not used too often as this makes it difficult to efficiently compute adjacency information for particular vertex quickly.
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Now let's talk about algorithms.
+
+What is an algorithm?
+A simple definition will be a set of steps to accomplish a task. You may have an algorithm to clean up your room, to reach from your house to your friends house e.t.c.
+
+In Computer Science algorithsm a set of instrucutres in a form a program to a computer to accomplish a task.
+
+
+A program is an implementation of an alogrithm in some programming language.
+
+Knowing about different algorithms and learning when to apply which one, so that we get the result fastest with least resources used is what makes the interesting.
+
+Some of real world famous examples are
+
+How does Pixar color a 3D model of a character based on the lighting in a room? They use rendering algorithm.
+How the information gets transmitted so quicly when you voice call or video call someone? It uses audio and video compression algorithms.
+when a query is made on a huge data set, different search algorithms are used which work on data structures holding the data, so that optimal performance can be provided.
+
+As we just read graphs, let's learn about Breadth first search
+
+
+Breadth first search is performed by visiting nearby nodes with 1 edge away and then reaching to nodes which are at kth level.
+
+Where it can be used or where you might have used it?
+
+Crawlers in Search Engines: Crawlers build index using Breadth First. The idea is to start from source page and follow all links from source and keep doing same. Depth First Traversal can also be used for crawlers, but the advantage with Breadth First Traversal is, depth or levels of built tree can be limited.
+
+Have you use any apps which suggest you resturants or shops or cinema halls based on your location, they do a breadth first search and give you nearby locations for these. GPS Navigation systems: Breadth First Search is used to find all neighboring locations.
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Now let's talk about sieve of eratohthenes..
+
+Prime number is important when it comes to Cryptography. Specially RSA algorithm. This is because to hack it a common method is to use addition subtraction, and other elementary operators which can be difficult with prime number codes.
+
+Primes are also useful when generating Pseudo-Random Numbers. Prime number helps us in avioding pattern and helps promoting actual random series. 
+
+The sieve of Eratosthenes is one of the most efficient ways to find all primes smaller than n when n is smaller than 10 million or so 
+
+For example, if n is 10, the output should be “2, 3, 5, 7″. If n is 20, the output should be “2, 3, 5, 7, 11, 13, 17, 19″.
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Next we have in line is heapsort.
+
+A tree is an acyclic graph. 
+
+The binary heap data structures is an array that can be viewed as a complete binary tree. Each node of the binary tree corresponds to an element of the array. The array is completely filled on all levels except possibly lowest.
+
+We represent heaps in level order, going from left to right. The array corresponding to the heap above is [25, 13, 17, 5, 8, 3].
+
+A Binary Heap is a Complete Binary Tree where items are stored in a special order such that value in a parent node is greater(or smaller) than the values in its two children nodes. The former is called as max heap and the latter is called min heap. The heap can be represented by binary tree or array.
+
+If the parent node is stored at index I, the left child can be calculated by 2 * I + 1 and right child by 2 * I + 2.
+
+Heap Sort Algorithm for sorting in increasing order:
+1. Build a max heap from the input data.
+2. At this point, the largest item is stored at the root of the heap. Replace it with the last item of the heap followed by reducing the size of heap by 1. Finally, heapify the root of tree.
+3. Repeat above steps until size of heap is greater than 1.
+
+How to build the heap?
+Heapify procedure can be applied to a node only if its children nodes are heapified. So the heapification must be performed in the bottom up order.
+Lets understand with the help of an example:
+
+The numbers in bracket represent the indices in the array 
+representation of data.
+
+The heapify procedure calls itself recursively to build heapin top down manner.
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Now let's talk about union find data structure.
+
+Think of a problem where you have a set of N elements which are partitioned into further subsets.
+It is required that we keep track of connectivity of each element in a particular subset or connectivity of subset with each other.
+
+  To do this operation efficiently, you can use Union-Find Data Structure
+
+
+It is also called as a disjoint-set data structure, or merge–find set. It supports two useful operations:
+
+Find: Determine which subset a particular element is in. Find typically returns an item from this set that serves as its "representative"; by comparing the result of two Find operations, one can determine whether two elements are in the same subset.
+
+In simple terms find, is there any path connecting two elements A and B
+
+Union: Join two subsets into a single subset.
+
+Think of a problem where you want to divide a digital image into regions of similar color. you initialize each pixel to be its own region and then successively merge the two adjacent regions that the most similar in color or some other property until you reach some stopping criteria such as number of regions or minimal region similarity required to merge. 
+
+In using this algorithm it is handy to know which region each pixel belongs to and to update that information when two regions are merged. 
+
+Kruskal's minimum spanning tree uses disjoin set data structure.
+
+
+Minimum spanning tree can be used for 
+
+Given connected graph G with positive edge weights, find a min weight set of edges that connects all of the vertices.
+
+
+Cluster analysis
+k clustering problem can be viewed as finding an MST and deleting the k-1 most
+expensive edges.
+
+
+Network design.
+– telephone, electrical, hydraulic, TV cable, computer, road
+The standard application is to a problem like phone network design. You have a business with several offices; you want to lease phone lines to connect them up with each other; and the phone company charges different amounts of money to connect different pairs of cities. You want a set of lines that connects all your offices with a minimum total cost. It should be a spanning tree, since if a network isn’t a tree you can always remove some edges and save money.
+
+
+You know how in image editing software there's a tool to let you select continuous blobs of the same color? 
+
+
+func find( var element )
+  while ( element is not the root ) element = element's parent
+  return element
+end func
+
+func union( var setA, var setB )
+  var rootA = find( setA ), rootB = find( setB )
+  if ( rootA is equal to rootB ) return
+  else
+     set rootB as rootA's parent
+end func
+
+
+Initially all the elements are parent of itself.
